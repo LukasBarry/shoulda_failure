@@ -1,5 +1,7 @@
 require 'rails_helper'
 
-RSpec.describe Author, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+describe Author do
+  it 'validates length of books' do
+    should validate_length_of(:books).is_at_least(1)
+  end
 end
